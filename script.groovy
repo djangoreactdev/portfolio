@@ -6,7 +6,7 @@ def buildJar() {
 def buildImage() {
     echo "building the docker image..."
     withCredentials([usernamePassword(credentialsId: 'DockerHub', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-        sh 'docker build -t djangoreactdev/portfolio:1.0 .'
+        sh 'docker build -t djangoreactdev/portfolio:1.0 ./front-next'
         sh "echo $PASS | docker login -u $USER --password-stdin"
         sh 'docker push djangoreactdev/portfolio:1.0'
     }
