@@ -19,7 +19,7 @@ def deployApp() {
     sh 'docker rm portfolio || true'
     sh 'docker rmi portfolio || true'
     sh 'docker pull djangoreactdev/portfolio:1.0'
-    sh 'docker run -d --name portfolio -p 8080:8080 djangoreactdev/portfolio:1.0'
+    sh 'docker run -d --name portfolio -p 80:3000 djangoreactdev/portfolio:1.0'
 } 
 
 return this
