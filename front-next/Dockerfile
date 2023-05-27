@@ -12,7 +12,7 @@ COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN pwd 
+RUN pwd && ls
 
 RUN npm run build
 
