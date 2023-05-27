@@ -16,7 +16,7 @@ export default function ExperienceCard({ experience }: Props) {
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
         className="rounded-full w-32 h-32 xl:w-[150px] xl:h-[150px] object-cover"
-        src={urlFor(experience.companyImage).url()}
+        src={urlFor(experience.companyImage && experience.companyImage).url()}
       />
 
       <div className="px-0  md:px-10">

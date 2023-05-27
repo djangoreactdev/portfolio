@@ -34,7 +34,7 @@ export default function Projects({ project }: Props) {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       className="w-36 h-36  sm:w-40 sm:h-40 md:w-42 md:h-42 xl:w-[300px] object-cover xl:h-[300px]"
-                      src={urlFor(item.image).url()}
+                      src={urlFor(item.image && item.image).url()}
                       alt={item.title}
                     />
                   </div>
