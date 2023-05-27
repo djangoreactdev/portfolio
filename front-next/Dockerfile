@@ -15,6 +15,8 @@ ENV NEXT_TELEMETRY_DISABLED 1
 RUN export NEXT_PUBLIC_BASE_URL="http://localhost:3000"
 
 RUN export NEXT_PUBLIC_SANITY_PROJECT_ID="i0j3k9o4"
+RUN export NODE_ENV="production"
+RUN export NEXT_PUBLIC_SANITY_DATASET="production"
 
 RUN npm run build
 
