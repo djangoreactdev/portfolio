@@ -9,4 +9,4 @@ RUN yarn install && yarn build
 
 EXPOSE 3333
 
-CMD ["yarn", "start", "--host=0.0.0.0"]
+CMD ["yarn", "start"]
