@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  next:
+  portfolio:
     build:
       context: ./front-next
       target: runner
@@ -14,7 +14,7 @@ services:
       - "3000:3000"
     env_file: .env
 
-  sanity:
+  portfolio-sanity:
     build:
       context: ./sanity
     image: sanity:1.0
