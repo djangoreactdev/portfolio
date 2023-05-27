@@ -5,7 +5,7 @@ def buildJar() {
 
 def buildImage() {
     echo "building the docker image..."
-    sh 'docker build -t djangoreactdev/portfolio:1.1 --build-arg NEXT_PUBLIC_BASE_URL="http://localhost:3000" ./front-next'
+    sh 'docker build -t djangoreactdev/portfolio:1.1 ./front-next'
     sh 'docker build -t djangoreactdev/portfolio-sanity:1.1 ./sanity'
     withCredentials([usernamePassword(credentialsId: 'DockerHub', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
 
