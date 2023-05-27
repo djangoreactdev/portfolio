@@ -9,7 +9,7 @@ services:
       - ./front-next:/app/front-next
     container_name: nextjs
     depends_on:
-      - sanity
+      - portfolio-sanity
     ports:
       - "3000:3000"
     env_file: .env

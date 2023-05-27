@@ -14,7 +14,7 @@ ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN pwd && ls
 
-RUN npm run build
+RUN yarn build
 
 FROM node:18-alpine AS runner
 WORKDIR /app
