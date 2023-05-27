@@ -1,14 +1,27 @@
 version: "3.8"
 services:
-  web:
+  next:
     build:
       context: ./front-next
       target: runner
+    image: nextjs:1.0
     volumes:
-      - ./front-next:/app
-    command: npm run dev
+      - ./front-next:/app/front-next
+    container_name: nextjs
+    depends_on:
+      - sanity
     ports:
       - "3000:3000"
-    environment:
-      NODE_ENV: development
+    env_file: .env
+
+  sanity:
+    build:
+      context: ./sanity
+    image: sanity:1.0
+    container_name: sanity
+    volumes:
+      - ./sanity:/app/sanity
+    ports:
+      - "3333:3333"
+    env_file: .env
     user: root
