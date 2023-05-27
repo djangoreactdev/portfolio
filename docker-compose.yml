@@ -3,7 +3,6 @@ services:
   portfolio:
     build:
       context: ./front-next
-      target: runner
     image: nextjs:1.0
     volumes:
       - ./front-next:/app/front-next
