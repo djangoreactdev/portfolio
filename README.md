@@ -37,7 +37,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Sanity Blogging Content Studio
 
-Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
+```bash
+npm run start
+# or
+yarn start
+```
 
 Now you can do the following things:
 
@@ -47,11 +51,11 @@ Now you can do the following things:
 - [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
 - [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
 
-or Docker
+# or Docker
 
 just run
 
-docker compose up
+`docker compose up`
 
 - Docker version 20.10.21, build 20.10.21-0ubuntu1~20.04.2
 - Docker Compose version v2.18.1

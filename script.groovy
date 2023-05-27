@@ -5,8 +5,11 @@ def buildJar() {
 
 def buildImage() {
     echo "building the docker image..."
+    sh 'env | sort'
     withCredentials([usernamePassword(credentialsId: 'DockerHub', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
-        sh 'docker build -t djangoreactdev/portfolio:1.1 ./front-next'
+         withEnv(['NEXT_PUBLIC_SANITY_DATASET=production', 'NEXT_PUBLIC_SANITY_PROJECT_ID=i0j3k9o4', 'NEXT_PUBLIC_BASE_URL=http://localhost:3000']) {
+            sh 'docker build -t djangoreactdev/portfolio:1.1 ./front-next'
+            }
         sh 'docker build -t djangoreactdev/portfolio-sanity:1.1 ./sanity'
         sh 'echo $PASSWORD | docker login -u $USERNAME --password-stdin'
         sh 'docker push djangoreactdev/portfolio:1.1'
