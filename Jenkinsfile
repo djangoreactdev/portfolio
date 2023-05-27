@@ -7,6 +7,13 @@ pipeline {
         label 'developer'
     }
 
+    environment {
+        NEXT_PUBLIC_SANITY_DATASET = "production"
+        NEXT_PUBLIC_SANITY_PROJECT_ID = "i0j3k9o4"
+        NODE_ENV = "production"
+        NEXT_PUBLIC_BASE_URL = "http://localhost:3000"
+    }
+
     stages {
         stage("init") {
             steps {
