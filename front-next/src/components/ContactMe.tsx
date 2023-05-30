@@ -30,7 +30,7 @@ export default function ContactMe({ pageInfo }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen relative flex flex-col text-center justify-evenly mx-auto px-10 items-center max-w-7xl   md:text-left md:flex-row"
+      className="h-screen relative flex flex-col text-center justify-evenly mx-auto px-5 items-center max-w-7xl   md:text-left md:flex-row"
     >
       <h4 className="uppercase  tracking-[20px] absolute text-gray-500 top-24  text-2xl">
         ContactMe
@@ -88,7 +88,7 @@ export default function ContactMe({ pageInfo }: Props) {
           />
           <button
             type="submit"
-            className="bg-[#F7AB0A] py-5 px-10 text-black font-bold  text-lg"
+            className="bg-[#F7AB0A] py-5 px-5 text-black font-bold  text-lg"
           >
             Submit
           </button>

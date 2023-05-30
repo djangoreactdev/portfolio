@@ -40,26 +40,11 @@ export default function Hero({ pageInfo }: Props) {
         <h1
           className="text-[22px] pb-12 h-8 px-2
         sm:pb-8 sm:h-24 lg:h-32 2xl:h-1/3
-         sm:text-5xl lg:text-6xl font-semibold sm:px-10"
+         sm:text-5xl lg:text-6xl font-semibold sm:px-5"
         >
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#FFE55C" />
         </h1>
-
-        <div className="pt-5">
-          <Link href="#about">
-            <button className="heroButton">About</button>
-          </Link>
-          <Link href="#experience">
-            <button className="heroButton">Experience</button>
-          </Link>
-          <Link href="#skills">
-            <button className="heroButton">Skills</button>
-          </Link>
-          <Link href="#projects">
-            <button className="heroButton">Projects</button>
-          </Link>
-        </div>
       </div>
     </div>
   );

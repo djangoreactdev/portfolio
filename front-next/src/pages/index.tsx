@@ -16,6 +16,7 @@ import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSocial } from "../utils/fetchSocials";
 import Image from "next/image";
 import up_arrow from "../images/up_arrow.png";
+import Menu from "@/components/Menu";
 
 type Props = {
   pageInfo: PageInfo;
@@ -51,28 +52,15 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
       </section>
 
       <section id="projects" className="snap-start">
-        <Projects project={projects} />
+        <Projects projects={projects} />
       </section>
 
       <section id="contact" className="snap-start">
         <ContactMe pageInfo={pageInfo} />
       </section>
 
-      <footer className="sticky bottom-5 ">
-        <div className="flex items-center justify-center ">
-          <Link href="#hero">
-            <div className="max-w-fit hover:after:content-['↑'] hover:after:absolute after:translate-x-10 hover:after:translate-x-14 after:-translate-y-10 hover:after:-translate-y-10 hover:after:font-bold hover:after:text-3xl hover:after:text-[#FFE55C]/90 hover:after:transition-all hover:after:duration-300 hover:after:ease-in-out hover:after:opacity-100 after:opacity-0 hover:after:-mx-5 hover:after:px-5">
-              <Image
-                className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer  "
-                src={up_arrow}
-                alt={"title"}
-                width="100"
-                height="100"
-                unoptimized={true}
-              />
-            </div>
-          </Link>
-        </div>
+      <footer className="show-menu sticky bottom-5">
+        <Menu />
       </footer>
     </div>
   );

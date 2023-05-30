@@ -3,14 +3,16 @@ import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Social } from "../../typings";
-import up_arrow from "../images/up_arrow.png";
-import Image from "next/image";
+
+import Menu from "./Menu";
 
 type Props = {
   socials: Social[];
 };
 
 export default function Header({ socials }: Props) {
+  const [showMenu, setShowMenu] = React.useState(false);
+
   return (
     <header className="sticky top-0 p-3 sm:p-5 flex items-center justify-between max-w-7xl mx-auto xl:items-center z-10 ">
       <motion.div
@@ -27,19 +29,8 @@ export default function Header({ socials }: Props) {
         transition={{
           duration: 1.5,
         }}
-        className="flex flex-row items-center w-2/3 sm:w-fit "
+        className="flex flex-row items-center  sm:w-fit "
       >
-        <Link href="#hero">
-          <Image
-            className="sm:hidden h-9 w-9 rounded-full hover:grayscale-0 cursor-pointer filter contrast-125 "
-            src={up_arrow}
-            alt={"logo"}
-            width="100"
-            height="100"
-            unoptimized={true}
-          />
-        </Link>
-        {/* Social Icons */}
         {socials.map((social) => (
           <SocialIcon
             key={social._id}
@@ -53,6 +44,10 @@ export default function Header({ socials }: Props) {
           />
         ))}
       </motion.div>
+
+      <div className="hidden-menu">
+        <Menu />
+      </div>
 
       <motion.div
         initial={{
@@ -68,7 +63,7 @@ export default function Header({ socials }: Props) {
         transition={{
           duration: 1.5,
         }}
-        className="flex flex-row items-center text-gray-300 cursor-pointer"
+        className="flex flex-row items-center justify-center w-1/6 text-gray-300 cursor-pointer"
       >
         <SocialIcon
           className="cursor-pointer"

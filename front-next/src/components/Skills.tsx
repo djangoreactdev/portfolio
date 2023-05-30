@@ -15,7 +15,7 @@ function Skills({ skills }: Props) {
       transition={{ duration: 1.5 }}
       className="
       max-w-xs
-      flex relative flex-col text-center  xl:flex-row sm:max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center"
+      flex relative flex-col text-center  xl:flex-row sm:max-w-[2000px] xl:px-5 min-h-screen justify-center xl:space-y-0 mx-auto items-center"
     >
       <h3 className="pageHeading">Skills</h3>
 
