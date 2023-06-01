@@ -10,11 +10,11 @@ export default function SkillItems({ skill, directionLeft }: Props) {
   return (
     <div className="group relative  flex cursor-pointer">
       <motion.img
-        initial={{ x: directionLeft ? -200 : 200 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1.0 }}
-        viewport={{ once: true }}
-        className="-mb-4 rounded-full  border object-cover border-gray-500 w-20 h-20  xl:w-28 xl:h-28 filter group-hover:grayscale transition duration-500 ease-in-out"
+        // initial={{ x: directionLeft ? -200 : 200 }}
+        // whileInView={{ x: 0, opacity: 1 }}
+        // transition={{ duration: 1.0 }}
+        // viewport={{ once: true }}
+        className="-mb-4 rounded-full  border object-cover border-gray-500 w-15 h-15 md:w-20 md:h-20 xl:w-28 xl:h-28 filter group-hover:grayscale transition duration-500 ease-in-out"
         src={urlFor(skill?.image).url()}
       />
 
