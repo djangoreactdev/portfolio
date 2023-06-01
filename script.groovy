@@ -5,14 +5,14 @@ def buildJar() {
 
 def buildImage() {
     echo "building the docker image..."
-    sh 'docker build -t djangoreactdev/portfolio-sanity:1.2 ./sanity'
-    sh 'docker build -t djangoreactdev/portfolio:1.2 ./front-next'
+    sh 'docker build -t djangoreactdev/portfolio-sanity:1.3 ./sanity'
+    sh 'docker build -t djangoreactdev/portfolio:1.3 ./front-next'
 
     withCredentials([usernamePassword(credentialsId: 'DockerHub', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
 
         sh 'echo $PASSWORD | docker login -u $USERNAME --password-stdin'
-        sh 'docker push djangoreactdev/portfolio:1.2'
-        sh 'docker push djangoreactdev/portfolio-sanity:1.2'
+        sh 'docker push djangoreactdev/portfolio:1.3'
+        sh 'docker push djangoreactdev/portfolio-sanity:1.3'
     }
 } 
 
