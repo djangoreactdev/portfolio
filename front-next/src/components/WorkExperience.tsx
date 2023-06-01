@@ -1,7 +1,7 @@
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";
 import { Experience } from "../../typings";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 type Props = {
   experiences: Experience[];
@@ -22,7 +22,7 @@ export default function WorkExperience({ experiences }: Props) {
       transition={{ duration: 1.5 }}
       className="h-screen relative w-full px-5 overflow-hidden text-left flex flex-col md:flex-row items-center justify-evenly mx-auto max-w-full"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px]  text-gray-500   text-2xl">
+      <h3 className="absolute top-24 uppercase tracking-[10px]  text-gray-500   text-2xl">
         Experience
       </h3>
 
@@ -37,12 +37,18 @@ export default function WorkExperience({ experiences }: Props) {
             );
           })}
       </div>
-      <div className="absolute  bottom-48 ">
-        <button onClick={scrollLeft} className="p-2 m-2 rounded-full bg-white">
-          <FiChevronLeft />
+      <div className="hidden sm:block absolute bottom-48 flex justify-around ">
+        <button
+          onClick={scrollLeft}
+          className="m-2 p-3  rounded-full hover:bg-black"
+        >
+          <BsArrowLeft style={{ fontSize: "32px" }} />
         </button>
-        <button onClick={scrollRight} className="p-2 m-2 rounded-full bg-white">
-          <FiChevronRight />
+        <button
+          onClick={scrollRight}
+          className=" m-2 p-3 rounded-full hover:bg-black"
+        >
+          <BsArrowRight style={{ fontSize: "32px" }} />
         </button>
       </div>
     </motion.div>

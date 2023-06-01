@@ -30,13 +30,13 @@ export default function ContactMe({ pageInfo }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen relative flex flex-col text-center justify-evenly mx-auto px-5 items-center max-w-7xl   md:text-left md:flex-row"
+      className="h-screen relative flex flex-col text-center justify-evenly mx-auto px-5 items-center max-w-7xl md:text-left md:flex-row"
     >
-      <h4 className="uppercase  tracking-[20px] absolute text-gray-500 top-24  text-2xl">
+      <h4 className="uppercase  tracking-[10px] absolute text-gray-500 top-24  text-2xl">
         ContactMe
       </h4>
-      <div className="-mb-32   flex flex-col space-y-4">
-        <h4 className="pt-4 font-semibold text-2xl md:text-4xl text-center">
+      <div className="flex flex-col space-y-4">
+        <h4 className="mt-5 pt-4 font-semibold text-xl md:text-4xl text-center">
           I have got just what you need{" "}
           <span className="underline decoration-[#F7AB0A]/50">Lets talk!</span>
         </h4>
